@@ -28,6 +28,7 @@ Drawable::~Drawable() {
 
 CVPLOT_DEFINE_FUN
 void Drawable::render(RenderTarget & renderTarget) {
+    RenderTarget rt = renderTarget;
 }
 
 CVPLOT_DEFINE_FUN

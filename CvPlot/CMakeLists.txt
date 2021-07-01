@@ -6,6 +6,8 @@ set(target CvPlot)
 project (${target} CXX)
 
 option(CVPLOT_HEADER_ONLY "Use as header only library" ON)
+set(CMAKE_CXX_FLAGS "-fPIC")
+
 
 if(CVPLOT_HEADER_ONLY)
     set(empty_or_interface INTERFACE)
@@ -85,8 +87,11 @@ if(CVPLOT_HEADER_ONLY)
     target_compile_definitions(${target} INTERFACE CVPLOT_HEADER_ONLY)
 else()
     target_sources(${target} PRIVATE src/cvplot.cpp)
+    # target_compile_definitions(${target} PRIVATE fPIC)
     if(BUILD_SHARED_LIBS)
-        target_compile_definitions(${target} PUBLIC CVPLOT_SHARED PRIVATE CVPLOT_EXPORTS)
+        target_compile_definitions(${target} PUBLIC CVPLOT_SHARED PRIVATE CVPLOT_EXPORTS )
+    # else()
+        # target_compile_definitions(${target} PRIVATE )
     endif()
 endif()
 

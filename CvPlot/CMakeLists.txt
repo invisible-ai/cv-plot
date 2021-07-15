@@ -96,6 +96,7 @@ else()
 endif()
 
 target_compile_features(${target} ${public_or_interface} cxx_std_11)
+target_compile_options(${target} ${public_or_interface} -Wno-error)
 
 #OpenCV
 if(NOT OpenCV_LIBS)

@@ -1,7 +1,7 @@
 // CvPlot - https://github.com/Profactor/cv-plot
 // Copyright (c) 2019 by PROFACTOR GmbH - https://www.profactor.at/
 
-#include <catch2/catch.hpp>
+#include <catch.hpp>
 #include <CvPlot/cvplot.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/opencv.hpp>

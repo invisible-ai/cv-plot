@@ -105,8 +105,8 @@ endif()
 target_link_libraries(${target} ${public_or_interface} ${OpenCV_LIBS})
 
 #Tests and Examples
-option(CVPLOT_WITH_TESTS "Build with tests" ON)
-option(CVPLOT_WITH_EXAMPLES "Build with examples" ON)
+option(CVPLOT_WITH_TESTS "Build with tests" OFF)
+option(CVPLOT_WITH_EXAMPLES "Build with examples" OFF)
 
 if(CVPLOT_WITH_TESTS OR CVPLOT_WITH_EXAMPLES)
     add_subdirectory(ext/catch2 catch2)

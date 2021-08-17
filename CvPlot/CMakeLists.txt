@@ -7,7 +7,7 @@ project (${target} CXX)
 
 option(CVPLOT_HEADER_ONLY "Use as header only library" ON)
 set(CMAKE_CXX_FLAGS "-fPIC")
-find_package(Catch2 REQUIRE)
+find_package(Catch2 REQUIRED)
 
 if(CVPLOT_HEADER_ONLY)
     set(empty_or_interface INTERFACE)

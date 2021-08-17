@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.9)
 set(target CvPlot)
 project (${target} CXX)
-
+find_package(Catch2 REQUIRED)
 option(CVPLOT_HEADER_ONLY "Use as header only library" ON)
 
 if(CVPLOT_HEADER_ONLY)

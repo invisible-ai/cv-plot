@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.9)
 set(target CvPlot)
 project (${target} CXX)
-
+add_compile_options(-Wno-error)
 option(CVPLOT_HEADER_ONLY "Use as header only library" ON)
 set(CMAKE_CXX_FLAGS "-fPIC")
 find_package(Catch2 REQUIRED)
@@ -96,7 +96,6 @@ else()
 endif()
 
 target_compile_features(${target} ${public_or_interface} cxx_std_11)
-target_compile_options(${target} ${public_or_interface} -Wno-error)
 
 #OpenCV
 if(NOT OpenCV_LIBS)
